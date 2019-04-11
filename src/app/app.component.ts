@@ -1,4 +1,5 @@
-  import { Component } from '@angular/core';
+import { Component } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'driving-inquiries-web';
+  title = 'DrivingInquiries';
+
+  // public ngOnInit()
+  // {
+  //   $(document).ready(function(){
+  //      alert("yes"); 
+  //   });
+  // }
 }
