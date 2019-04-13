@@ -1,5 +1,12 @@
 <div class="m-4">
     <div class="text-center">
-        <h3>استعلام خلافی خودرو</h3>
+        <form role="form" novalidate #carInquiryForm="ngForm">
+            <fa name="car" size="4x" ></fa>
+            <h4 class="h3 mb-3 font-weight-normal">استعلام خلافی خودرو</h4>
+            <label for="inputEmail" class="sr-only">شماره پلاک خودرو</label>
+            <input  #barCode="ngModel" name="barCode" class="form-control" placeholder="شماره پلاک خودرو" tabindex="1" [(ngModel)]="carInquiryRequest.barCode" required autofocus>
+            
+            <button class="btn btn-lg btn-primary btn-block mt-5" type="submit" (click)="getCarInquiry()">استعلام</button>
+          </form>
     </div>
   </div>

@@ -7,6 +7,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { CertificateInquiryComponent } from './certificateInquiry.component';
 import { CarInquiryComponent } from './carInquiry.component';
 import { MainComponent } from './main.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MainComponent } from './main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
