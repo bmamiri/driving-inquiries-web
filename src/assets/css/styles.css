@@ -3,6 +3,37 @@ body {
     font-weight: 300;
     direction: rtl;
     height: 100vh;
-    color: #3C4858;
+    /* color: #3C4858; */
     font-size: 14px;
+    background-color: #f5f5f5;
 }
+
+body{
+    background: #eee;
+}
+span{
+    font-size:15px;
+}
+a{
+  text-decoration:none; 
+  color: #0062cc;
+  border-bottom:2px solid #0062cc;
+}
+/* .box{
+    padding:60px 0px;
+} */
+
+.box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+
+.text{
+    margin:30px 0px;
+}
+
+/* .fa{
+     color:#4183D7;
+} */
