@@ -9,6 +9,7 @@ import { CarInquiryComponent } from './carInquiry.component';
 import { MainComponent } from './main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ArchwizardModule } from 'angular-archwizard';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ArchwizardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,39 +1,72 @@
 body {
     font-family: IRANSans !important;
     font-weight: 300;
-    direction: rtl;
     height: 100vh;
     /* color: #3C4858; */
-    font-size: 14px;
-    background-color: #f5f5f5;
+    font-size: 12px;
 }
 
-body{
-    background: #eee;
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
-span{
-    font-size:15px;
+.darken-grey-text {
+    color: #2E2E2E;
 }
-a{
-  text-decoration:none; 
-  color: #0062cc;
-  border-bottom:2px solid #0062cc;
+.danger-text {
+    color: #ff3547; }
+.default-text {
+    color: #2BBBAD; 
 }
-/* .box{
-    padding:60px 0px;
-} */
+.info-text {
+    color: #33b5e5; 
+}
+.form-white .md-form label {
+  color: #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password], .form-white input[type=text] {
+    border-bottom: 1px solid #fff; 
+}
+.form-white .form-control:focus {
+    color: #fff;
+}
+.form-white .form-control {
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+    color: #fff; 
+}
+.form-white textarea.md-textarea  {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly])+label {
+    color: #fff;
+}
+.ripe-malinka-gradient {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.near-moon-gradient {
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}
 
-.box-part{
-    background:#FFF;
-    border-radius:0;
-    padding:60px 10px;
-    margin:30px 0px;
+.awws > .horizontal{
+  width:30%;
 }
-
-.text{
-    margin:30px 0px;
-}
-
-/* .fa{
-     color:#4183D7;
-} */

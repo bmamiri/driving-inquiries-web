@@ -1,2 +1,134 @@
+<div class="container-fluid">
 
-<router-outlet></router-outlet>
+    <div class="row">
+        <div class="col m-4">
+            <aw-wizard class="awws" [disableNavigationBar]="true">
+                <aw-wizard-step>
+                    <h3 class="text-center font-up font-bold deep-orange-text py-4" style="padding: 0px !important">
+                        <i class="fa fa-car" style="font-size: 40px;"></i>
+                    </h3>
+                    <h6 class="text-center" style="font-weight: 500">استعلام خلافی و نمره منفی گواهینامه</h6>
+                    <div class="text-center" style="margin-top: 40px;">
+                        <button style="width: 225px;padding: 15px 0 !important;" class="btn btn-deep-orange"
+                            (click)="getCarInquiry($event)"><span>استعلام خلافی خودرو</span>&nbsp;&nbsp;<i
+                                class="fa fa-car" style="font-size: 20px"></i></button>
+                        <br>
+                        <br>
+                        <button style="width: 225px;padding: 15px 0 !important;" class="btn btn-red"
+                            (click)="getCarInquiry($event)">استعلام نمره منفی گواهینامه&nbsp;&nbsp;<i
+                                class="fa fa-address-card" style="font-size: 20px"></i></button>
+                    </div>
+                </aw-wizard-step>
+                <aw-wizard-step>
+                    <h3 class="text-center font-up font-bold deep-orange-text py-4" style="padding: 0px !important;">
+                        <i class="fa fa-car" style="font-size: 40px;"></i>
+                    </h3>
+                    <h6 class="text-center" style="font-weight: 500;min-width: 237px;">استعلام خلافی و نمره منفی گواهینامه</h6>
+                    <div class="rtl" style="margin-top:40px;">
+                            <form role="form" novalidate #carInquiryForm="ngForm">
+
+                                    <div class="md-form">
+                                        <input type="text" #barCode="ngModel" name="barCode" class="form-control" tabindex="1"
+                                            [(ngModel)]="carInquiryRequest.barCode" required autofocus>
+                                        <label for="barCode">شماره بارکد کارت خودرو</label>
+                                    </div>
+                                    <div class="text-center">
+                                            <button style="padding: 15px 0 !important;width: 100px;" class="btn btn-deep-orange" (click)="getCarInquiry($event)"><i
+                                                class="fa fa-angle-double-right pr-2" aria-hidden="true"></i>مرحله بعد</button>
+                                        <button  style="padding: 15px 0 !important;width: 100px;"  class="btn btn-deep-orange" awPreviousStep>مرحله قبل<i class="fa fa-angle-double-left pl-2"
+                                            aria-hidden="true"></i></button>
+                                        
+            
+                                    </div>
+                                </form>
+                    </div>
+                </aw-wizard-step>
+                <aw-wizard-step>
+                    <h3 class="text-center font-up font-bold deep-orange-text py-4" style="padding: 0px !important">
+                        <i class="fa fa-car" style="font-size: 40px;"></i>
+                    </h3>
+                    <div class="card card-cascade narrower rtl" style="margin-bottom: 20px;">
+                        <!--Card image-->
+                        <div
+                            class="view view-cascade gradient-card-header narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center text-center">
+                            <a href="" class="white-text mx-3" style="width: 100%;display: block;background-color: #003366;padding: 10px;">استعلام خلافی
+                                خودرو</a>
+                        </div>
+                        <!--/Card image-->
+
+                        <div class="px-4" style="padding: 0px !important;">
+
+                            <div class="table-wrapper">
+                                <!--Table-->
+                                <table class="table table-hover mb-0">
+
+
+
+                                    <!--Table body-->
+                                    <tbody>
+                                        <tr>
+                                            <td><b>شماره پلاک</b></td>
+                                            <td>66 ایران 326 ص</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>مبلغ جریمه</b></td>
+                                            <td>10000 ریال</td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+                                <!--Table-->
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="text-center rtl">
+                            <button style="padding: 15px 0 !important;width: 80px;" class="btn btn-deep-orange" data-toggle="modal" data-target="#modalPush">پرداخت</button>
+                        <button  style="padding: 15px 0 !important;width: 80px;"  class="btn btn-deep-orange" awPreviousStep>مرحله قبل<i class="fa fa-angle-double-left pl-2"
+                            aria-hidden="true"></i></button>
+                    </div>
+                </aw-wizard-step>
+            </aw-wizard>
+        </div>
+
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
+
+
+<!--Modal: modalPush-->
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-warning" role="document">
+        <!--Content-->
+        <div class="modal-content text-center rtl">
+            <!--Header-->
+            <div class="modal-header d-flex justify-content-center" style="background-color: #003366 !important;padding: 5px;">
+                <p class="heading">تایید پرداخت</p>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <p>جهت کسر مبلغ 10000 ریال لطفا، سپرده مورد نظر خود را انتخاب نمائید.</p>
+                <select class="browser-default custom-select">
+                        <option selected>انتخاب سپرده</option>
+                        <option value="1">0203342768009</option>
+                      </select>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                    <a style="padding: 10px 30px;"  class="btn btn-success waves-effect">تائید</a>
+                <a style="padding: 10px 20px;" type="button" class="btn btn-red waves-effect" data-dismiss="modal">انصراف</a>
+                
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: modalPush-->
